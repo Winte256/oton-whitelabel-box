@@ -1,26 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+// import App from 'oton_core/App';
+import SampleHeader from 'oton_core/components/SampleHeader';
+// console.log(App)
+// const App = React.lazy(() => import("oton_core"));
 
-function App() {
+declare global {
+  interface Window {
+    config: any;
+  }
+}
+
+const staticCdn = 'https://cdn.jsdelivr.net/gh/ArtemZubarev/oton-core-assets@main/images';
+
+function CustomApp() {
+  const logoUrl = `${staticCdn}/logo.svg`
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="CustomApp">
+      This app is custom
+      {/* <App/> */}
+      <SampleHeader/>
     </div>
   );
 }
 
-export default App;
+export default CustomApp;
