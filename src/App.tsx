@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 // import App from 'oton_core/App';
-import SampleHeader from 'oton_core/components/SampleHeader';
+import CommonHeader from 'oton_core/components/CommonHeader';
 // console.log(App)
 // const App = React.lazy(() => import("oton_core"));
 
@@ -19,7 +19,7 @@ function CustomApp() {
     <div className="CustomApp">
       This app is custom
       {/* <App/> */}
-      <SampleHeader/>
+      <CommonHeader/>
     </div>
   );
 }
